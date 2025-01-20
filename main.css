@@ -1,0 +1,258 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 50px;
+    margin: 0px;
+    background-color: black;
+
+}
+body{
+    background-color: black;
+    overflow:auto;
+}
+.logo{
+    width: 60px;
+    margin: 0px;
+    
+}
+
+.nav-items > ul{
+    display: flex;
+    margin-top: 5%;
+    list-style-type: none;
+}
+.nav-items > ul > li>a{
+    
+    padding: 20px;
+    color: white;
+
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+body{
+  margin: 0;
+  
+  background-image: url("./wallpaper.jpg");
+}
+.banner {
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("./wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: bgZoomIn 4s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("./wallpaper.png");
+  background-size: cover;
+  background-position: top;
+  transform: scale(5);
+  animation: bgZoomOut 4s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+@keyframes bgZoomIn {
+  from {
+    transform: scale(1.7);
+  } to {
+    transform: scale(1);
+  }
+}
+@keyframes bgZoomOut {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(2);
+  }
+}
+
+svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.1;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textAnimation 1s ease-in-out 1 forwards;
+}
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+button {
+
+  font-size: 18px;
+  
+  letter-spacing: 2px;
+  
+  text-transform: uppercase;
+  
+  display: inline-block;
+  
+  text-align: center;
+  
+  font-weight: bold;
+  
+  padding: 0.7em 2em;
+  
+  border: 3px solid rgb(63, 100, 8);
+  
+  
+  border-radius: 2px;
+  
+  position: relative;
+  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16)
+  
+  0 3px 6px rgba(0, 0, 0, 0.1);
+  
+  color: #090909;
+  
+  text-decoration: none;
+  
+  transition: 0.3s ease all;
+  
+  z-index: 1;
+  
+  
+  }
+  button:before {
+
+    transition: 0.5s all ease;
+    
+    position: absolute;
+    
+    top: 0;
+    
+    left: 50%;
+    
+    right: 50%;
+    
+    bottom: 0;
+    
+    opacity: 0;
+    
+    content:"";
+    
+    background-color:#060003;
+    
+    z-index: -1;
+    
+    }
+    
+    button:hover, button:focus {
+    
+    color: white;
+    
+    }
+    
+    
+    button:hover:before, button:focus:before {
+    
+    transition: 0.5s all ease;
+    
+    left: 0;
+    
+    right: 0;
+    
+    opacity: 1;
+    
+
+    
+    }
+    
+    button:active {
+    
+    transform: scale(1.5);
+    }
+    .button {
+      opacity: 0; /* Initially hidden */
+      transition: opacity 6s ease-in-out;
+      animation: fadeIn 6s forwards; /* Use animation to control timing */
+    }
+    
+  
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+@media only screen and (max-width: 600px) {
+    .header{ background-color: black;
+        height: 60px;
+        margin: 0%;
+    }
+    .logo{
+        width: 70px;
+    }
+    
+    .nav-items > ul > li>a{
+        font-size: smaller;
+        padding: 5px;
+        color: white;
+        justify-content: center;
+    }
+    .nav-items > ul{
+        display: flex;
+        margin-top: 5%;
+        list-style-type: none;
+    }
+   
+    svg{
+     width: 395px;
+     height: 196px;
+     font-size: x-large;
+   
+    }
+    button{
+      font-size: 8px;
+    }
+    body{
+
+      
+      background-image: url("./pot.jpeg");
+    }
+    .banner::before {
+     
+      background-image: url("./pot.jpeg");
+    
+    }
+  }
+
