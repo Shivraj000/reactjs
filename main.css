@@ -41,7 +41,7 @@ button:hover{
 body{
   margin: 0;
   
-  background-image: url("./wallpaper.jpg");
+  
 }
 .banner {
   height: 100vh;
@@ -244,11 +244,7 @@ button {
     button{
       font-size: 8px;
     }
-    body{
 
-      
-      background-image: url("./pot.jpeg");
-    }
     .banner::before {
      
       background-image: url("./pot.jpeg");
